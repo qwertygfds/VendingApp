@@ -12,7 +12,7 @@ ConfigurationManager configuration = builder.Configuration;
 
 string? dbConnString = builder.Configuration
     .GetConnectionString("DbConnString")
-    ?? "Server=localhost;Port=5432;Database=educationplus;User Id=postgres;Password=postgres;";
+    ?? "Server=localhost;Port=5432;Database=vendingdb;User Id=postgres;Password=postgres;";
 builder.Services.AddNpgsqlDbContext<VendingAppDbContext>(dbConnString);
 
 #region Authorization

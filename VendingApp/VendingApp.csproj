@@ -1,10 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-VendingApp-a436bfa7-81fc-45f6-b105-cbd8cb594c6d</UserSecretsId>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -25,12 +24,12 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\Views\" />
+    <ProjectReference Include="..\VendingApp.Domain\VendingApp.Domain.csproj" />
+    <ProjectReference Include="..\VendingApp.Infrastructure\VendingApp.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VendingApp.Domain\VendingApp.Domain.csproj" />
-    <ProjectReference Include="..\VendingApp.Infrastructure\VendingApp.Infrastructure.csproj" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

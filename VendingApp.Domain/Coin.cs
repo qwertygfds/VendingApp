@@ -17,5 +17,10 @@ namespace VendingApp.Domain
         /// Номинал
         /// </summary>
         public int Denomination { get; set; }
+
+        /// <summary>
+        /// Заблокирована ли монета
+        /// </summary>
+        public bool IsBlocked { get; set; }
     }
 }

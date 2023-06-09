@@ -19,9 +19,24 @@ namespace VendingApp.Domain
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
+        /// Стоимость товара
+        /// </summary>
+        public double Price { get; set; }
+
+        /// <summary>
         /// Количество товара
         /// </summary>
         public int Count { get; private set; }
+
+        /// <summary>
+        /// Адрес картинки
+        /// </summary>
+        public string? Image { get; set; }
+
+        /// <summary>
+        /// Код товара на витрине
+        /// </summary>
+        public int? Code { get; set; }
 
         public bool SetCount(int count)
         {
@@ -32,5 +47,7 @@ namespace VendingApp.Domain
             }
             return false;
         }
+
+        public VendingMachine VendingMachine { get; } = null!;
     }
 }

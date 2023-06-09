@@ -9,6 +9,7 @@ namespace VendingApp.Infrastructure
         public DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
         public DbSet<Coin> Coins { get; set; } = null!;
         public DbSet<Product> Products { get; set; } = null!;
+        public DbSet<VendingMachine> VendingMachines { get; set; } = null!;
 
         public VendingAppDbContext(DbContextOptions<VendingAppDbContext> options)
             : base(options)
@@ -17,7 +18,6 @@ namespace VendingApp.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             base.OnModelCreating(modelBuilder);
         }
 
